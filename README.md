@@ -10,9 +10,9 @@ The objective of the project was to Build an app that is functionally similar to
 
 ### Screenshot of the page
 
-![image](https://user-images.githubusercontent.com/97469046/188023412-71c763fb-c2d8-404f-a12d-9c16757addaf.png)
+![image](https://user-images.githubusercontent.com/97469046/188024764-95c0dfc2-6e11-43db-b942-c0385c6eced2.png)
 
-* Live demo: https://Random-Quote-Generator.changl88.repl.co
+* Live demo: https://Markdown-previewer.changl88.repl.co
 
 
 ### Technology / language used
