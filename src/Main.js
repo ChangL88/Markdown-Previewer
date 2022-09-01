@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { marked } from 'marked'
+import './main.css'
 
 
 
@@ -47,7 +48,7 @@ And here. | Okay. | I think we get it.
 - And of course there are lists.
     - Some are bulleted.
         - With different indentation levels.
-        - That look like this.
+            - That look like this.
 
 
 1. And there are numbered lists too.
@@ -65,8 +66,12 @@ And here. | Okay. | I think we get it.
 
         return ( 
             <div className="main">
-                <textarea name="editor" id="editor" cols="80" rows="20" value={editorValue} onChange={(e) => handleChange(e)}></textarea>
-                <div style={{backgroundColor: 'lightgray'}} id="preview" dangerouslySetInnerHTML={{__html: marked.parse(editorValue, { renderer: renderer })}}></div>
+                <div className="editor-wrapper">
+                    <textarea name="editor" id="editor" cols="80" rows="20" value={editorValue} onChange={(e) => handleChange(e)}></textarea>
+                </div>
+                <div className="render-wrapper">
+                    <div style={{backgroundColor: 'lightgray'}} id="preview" dangerouslySetInnerHTML={{__html: marked.parse(editorValue, { renderer: renderer })}}></div>
+                </div>
             </div>
         );
     }
