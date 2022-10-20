@@ -76,3 +76,11 @@ pre {
     max-width: 90%;
     margin: 2rem auto;
   }
+
+#preview {
+    margin: auto;
+}
+
+.git{
+    display: inline-block;
+}

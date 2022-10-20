@@ -65,14 +65,17 @@ And here. | Okay. | I think we get it.
     }
 
         return ( 
-            <div className="main">
-                <div className="editor-wrapper">
-                    <textarea name="editor" id="editor" cols="80" rows="20" value={editorValue} onChange={(e) => handleChange(e)}></textarea>
+            <>
+                <a className='git' href="https://github.com/ChangL88/Markdown-Previewer"><img className='git' src="/GitHub-Mark-32px.png" alt="github logo"/></a>
+                <div className="main">
+                    <div className="editor-wrapper">
+                        <textarea name="editor" id="editor" cols="80" rows="20" value={editorValue} onChange={(e) => handleChange(e)}></textarea>
+                    </div>
+                    <div className="render-wrapper">
+                        <div style={{backgroundColor: 'lightgray'}} id="preview" dangerouslySetInnerHTML={{__html: marked.parse(editorValue, { renderer: renderer })}}></div>
+                    </div>
                 </div>
-                <div className="render-wrapper">
-                    <div style={{backgroundColor: 'lightgray'}} id="preview" dangerouslySetInnerHTML={{__html: marked.parse(editorValue, { renderer: renderer })}}></div>
-                </div>
-            </div>
+            </>
         );
     }
 
